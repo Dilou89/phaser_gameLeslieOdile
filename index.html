@@ -49,7 +49,7 @@
     //  We will enable physics for any object that is created in this group
     platforms.enableBody = true;
     var ground=platforms.create(0, game.world.height-64, "platform");
-    ground.scale.setTo(2, 2);
+    // ground.scale.setTo(2, 2);
     ground.body.immovable=true;
     var ledge = platforms.create(400, 400, 'ground');
     ledge.body.immovable = true;
