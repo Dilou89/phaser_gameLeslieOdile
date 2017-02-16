@@ -28,18 +28,18 @@
     var platforms;
     function create() {
      bg = game.add.sprite(0, 0, 'sky' );
-     pl=game.load.image('ground', 'assets/platform.png');
-     st = game.add.sprite(10, 10, 'star');
+     // pl=game.load.image('ground', 'assets/platform.png');
+     // st = game.add.sprite(10, 10, 'star');
      
           // dd= game.add.sprite(0, 50, 'dude');
 
 
 
 
-          game.physics.startSystem(Phaser.Physics.ARCADE);
+          // game.physics.startSystem(Phaser.Physics.ARCADE);
           player = game.add.sprite(32, game.world.height - 150, 'dude');
           game.physics.arcade.enable(player);
-          player.body.bounce.y = 0.2;
+          // player.body.bounce.y = 0.2;
           player.body.gravity.y = 300;
           player.body.collideWorldBounds = true;
 
@@ -48,7 +48,7 @@
 
     //  We will enable physics for any object that is created in this group
     platforms.enableBody = true;
-    var ground=platforms.create(0, game.world.height-64, "platform");
+    var ground=platforms.create(0, game.world.height /*-64, "platform"*/);
     // ground.scale.setTo(2, 2);
     ground.body.immovable=true;
     var ledge = platforms.create(400, 400, 'ground');
